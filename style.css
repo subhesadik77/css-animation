@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.area {
+  height: 100vh;
+  background-color: rgb(68, 61, 61);
+  position: relative;
+}
+/* For ball */
+@keyframes ball {
+  25% {
+    left: 100%;
+    top: 70%;
+  }
+
+  50% {
+    left: 70%;
+    top: 92%;
+  }
+  75% {
+    left: 0%;
+    bottom: 50%;
+  }
+  100% {
+    right: 50%;
+    bottom: 100%;
+  }
+}
+@keyframes strike {
+  25% {
+    left: 75%;
+  }
+
+  75% {
+    right: 75%;
+  }
+}
+
+.ball {
+width: 15px;
+height: 15px;
+border-radius: 50px;
+background-color: rgb(219, 216, 209);
+position: absolute;
+top: 1%;
+left: 50%;
+transform: translate(-50%);
+animation-name: ball;
+animation-duration: 7s;
+animation-delay: 0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+.strike {
+width: 150px;
+height: 10px;
+background-color: whitesmoke;
+position: absolute;
+bottom: 5%;
+left: 50%;
+transform: translate(-50%);
+animation-name: strike;
+animation-duration: 7s;
+animation-delay: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+}
+
